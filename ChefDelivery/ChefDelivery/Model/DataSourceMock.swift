@@ -22,3 +22,11 @@ let bannerMocks: [OrderType] = [
     OrderType(id: UUID(), name: "brazilian-meal-banner", image: "brazilian-meal-banner"),
     OrderType(id: UUID(), name: "pokes-banner", image: "pokes-banner"),
 ]
+
+let storesMock: [OrderType] = [
+    OrderType(id: UUID(), name: "Monstro Burger", image: "monstro-burger-logo"),
+    OrderType(id: UUID(), name: "Food court", image: "food-court-logo"),
+    OrderType(id: UUID(), name: "Carbron", image: "carbron-logo"),
+    OrderType(id: UUID(), name: "Padaria", image: "bakery-logo"),
+    OrderType(id: UUID(), name: "Açai Panda", image: "acai-panda-logo"),
+]
