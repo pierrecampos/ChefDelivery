@@ -15,7 +15,7 @@ struct NavigationBar: View {
             }
             .font(.subheadline)
             .fontWeight(.semibold)
-            .foregroundStyle(.black)
+            .foregroundStyle(.primary)
             
             Spacer()
             Button(action: {}, label: {
