@@ -22,7 +22,7 @@ struct NavigationBar: View {
                 Image(systemName: "bell.badge")
                     .font(.title2)
                     .foregroundStyle(.red)
-            })            
+            })
         }
     }
 }
