@@ -12,7 +12,11 @@ struct ContentView: View {
         NavigationBar()
             .padding(.horizontal, 15)
         ScrollView(.vertical, showsIndicators: false) {
-            OrderTypeGridView()
+            VStack(spacing: 20) {
+                OrderTypeGridView()
+                CarouselTabView()
+            }
+            
         }
     }
 }
