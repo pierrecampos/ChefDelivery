@@ -58,7 +58,7 @@ struct StoreDetailView: View {
                             Text(product.description)
                                 .foregroundStyle(.black.opacity(0.5))
                             
-                            Text("\(product.price)")
+                            Text(product.price.formatToCurrency())
                         }
                         
                         Spacer()
