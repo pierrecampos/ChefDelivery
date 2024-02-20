@@ -16,6 +16,9 @@
 		8F460BAF2B80476900A5DEF4 /* OrderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F460BAE2B80476900A5DEF4 /* OrderType.swift */; };
 		8F460BB12B80480D00A5DEF4 /* DataSourceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F460BB02B80480D00A5DEF4 /* DataSourceMock.swift */; };
 		8F460BB32B804BCF00A5DEF4 /* OrderTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F460BB22B804BCF00A5DEF4 /* OrderTypeView.swift */; };
+		8F73DF032B84348300C78B32 /* StoreDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F73DF022B84348300C78B32 /* StoreDetailView.swift */; };
+		8F73DF052B843B8A00C78B32 /* StoreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F73DF042B843B8A00C78B32 /* StoreType.swift */; };
+		8F73DF072B843BA700C78B32 /* ProductType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F73DF062B843BA700C78B32 /* ProductType.swift */; };
 		8FD940012B7EFB330014D926 /* ChefDeliveryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD940002B7EFB330014D926 /* ChefDeliveryApp.swift */; };
 		8FD940032B7EFB330014D926 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD940022B7EFB330014D926 /* ContentView.swift */; };
 		8FD940052B7EFB340014D926 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FD940042B7EFB340014D926 /* Assets.xcassets */; };
@@ -32,6 +35,9 @@
 		8F460BAE2B80476900A5DEF4 /* OrderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderType.swift; sourceTree = "<group>"; };
 		8F460BB02B80480D00A5DEF4 /* DataSourceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceMock.swift; sourceTree = "<group>"; };
 		8F460BB22B804BCF00A5DEF4 /* OrderTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTypeView.swift; sourceTree = "<group>"; };
+		8F73DF022B84348300C78B32 /* StoreDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetailView.swift; sourceTree = "<group>"; };
+		8F73DF042B843B8A00C78B32 /* StoreType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreType.swift; sourceTree = "<group>"; };
+		8F73DF062B843BA700C78B32 /* ProductType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductType.swift; sourceTree = "<group>"; };
 		8FD93FFD2B7EFB330014D926 /* ChefDelivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChefDelivery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FD940002B7EFB330014D926 /* ChefDeliveryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefDeliveryApp.swift; sourceTree = "<group>"; };
 		8FD940022B7EFB330014D926 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +70,7 @@
 			children = (
 				8F25D44D2B8147C900197B82 /* StoresItemView.swift */,
 				8F25D44F2B814C0600197B82 /* StoresContainerView.swift */,
+				8F73DF022B84348300C78B32 /* StoreDetailView.swift */,
 			);
 			path = StoresView;
 			sourceTree = "<group>";
@@ -99,6 +106,8 @@
 			children = (
 				8F460BAE2B80476900A5DEF4 /* OrderType.swift */,
 				8F460BB02B80480D00A5DEF4 /* DataSourceMock.swift */,
+				8F73DF042B843B8A00C78B32 /* StoreType.swift */,
+				8F73DF062B843BA700C78B32 /* ProductType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -213,15 +222,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F460BAF2B80476900A5DEF4 /* OrderType.swift in Sources */,
+				8F73DF072B843BA700C78B32 /* ProductType.swift in Sources */,
 				8F25D4492B813C2F00197B82 /* CarouselItemView.swift in Sources */,
 				8FD940032B7EFB330014D926 /* ContentView.swift in Sources */,
 				8F460BB12B80480D00A5DEF4 /* DataSourceMock.swift in Sources */,
 				8F25D4502B814C0600197B82 /* StoresContainerView.swift in Sources */,
 				8F460BB32B804BCF00A5DEF4 /* OrderTypeView.swift in Sources */,
 				8F25D44E2B8147C900197B82 /* StoresItemView.swift in Sources */,
+				8F73DF032B84348300C78B32 /* StoreDetailView.swift in Sources */,
 				8F460BAC2B803FC800A5DEF4 /* OrderTypeGridView.swift in Sources */,
 				8FD940012B7EFB330014D926 /* ChefDeliveryApp.swift in Sources */,
 				8F460BA92B80371200A5DEF4 /* NavigationBar.swift in Sources */,
+				8F73DF052B843B8A00C78B32 /* StoreType.swift in Sources */,
 				8F25D44B2B813F0300197B82 /* CarouselTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
