@@ -11,6 +11,7 @@ struct StoreDetailView: View {
     
     var store: StoreType
     @Environment(\.presentationMode) var presentationMode
+    @State private var selectedProduct: ProductType?
     
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -29,7 +30,7 @@ struct StoreDetailView: View {
                     Image(store.logoImage)
                 }
                 .padding(.vertical, 8)
-                .padding()
+                .padding(.horizontal)
                 
                 HStack {
                     Text(store.location)
@@ -51,9 +52,9 @@ struct StoreDetailView: View {
                     .padding()
                 
                 ForEach(store.products) { product in
-                    NavigationLink {
-                        ProductDetailView(product: product)
-                    } label: {
+                    Button(action: {
+                        selectedProduct = product
+                    }, label: {
                         HStack(spacing: 8) {
                             VStack(alignment: .leading, spacing: 8) {
                                 Text(product.name)
@@ -75,10 +76,14 @@ struct StoreDetailView: View {
                                 .frame(width: 120, height: 120)
                                 .shadow(color: .black.opacity(0.3), radius: 20, x: 6, y: 8)
                         }
+                        .padding()
                         .foregroundStyle(.black)
+                    })
+                    .sheet(item: $selectedProduct) { product in
+                        ProductDetailView(product: product)
                     }
                 }
-                .padding()
+                
             }
             .navigationTitle(store.name)
             .navigationBarBackButtonHidden()
