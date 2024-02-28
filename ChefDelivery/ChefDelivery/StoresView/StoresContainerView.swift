@@ -59,11 +59,12 @@ struct StoresContainerView: View {
                         .padding(.vertical, 32)
                         .frame(maxWidth: .infinity)
                 } else {
-                    ForEach(filteredStores) { mock in
+                    ForEach(filteredStores) { store in
                         NavigationLink {
-                            StoreDetailView(store: mock)
+                            StoreDetailView()
+                                .environmentObject(store)
                         } label: {
-                            StoresItemView(order: mock)
+                            StoresItemView(order: store)
                         }
                     }.foregroundStyle(.black)
                 }
