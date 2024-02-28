@@ -10,13 +10,14 @@ import SwiftUI
 struct ProductDetailView: View {
     
     var product: ProductType
+    @State private var productQuantity = 1
     
     var body: some View {
         VStack {
             ProductDetailHeaderView(product: product)
             Spacer()
-            ProductDetailQuantityView()
-            Spacer()            
+            ProductDetailQuantityView(productQuantity: $productQuantity)
+            Spacer()
             ProductDetailButtonView()
         }
     }
