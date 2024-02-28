@@ -14,7 +14,7 @@ struct StoresContainerView: View {
     
     var filteredStores: [StoreType] {
         return storesMock.filter { store in
-            store.stars >= ratingFilter
+            store.stars >= ratingFilter && 1 == 1
         }
     }
     
