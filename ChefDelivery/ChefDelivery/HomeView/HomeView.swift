@@ -126,7 +126,6 @@ struct HomeView: View {
                     }
                     .frame(width: geometry.size.width - 60, height: buttonHeight)
                     .opacity(isAnimating ? 1 : 0)
-                    .offset(y: isAnimating ? 0 : 100)
                     
                 }.onAppear {
                     withAnimation(.easeInOut(duration: 1)) {
