@@ -11,19 +11,22 @@ struct HomeView: View {
     
     @State private var isAnimating = false
     @State private var imageOffset: CGSize = .zero
+    @State private var buttonOffset: CGFloat = 0
+    @State private var showSecondScreen = false
+    private let buttonHeight: CGFloat = 80
     
     var body: some View {
         GeometryReader { geometry in
             ZStack {
                 Circle()
-                    .foregroundStyle(.colorRed)
+                    .fill(.colorRed)
                     .frame(width: isAnimating ? 200 : 0)
                     .position(x: isAnimating ? 50 : -50 , y: isAnimating ? 100 : -100)
                     .blur(radius: 60)
                     .opacity(isAnimating ? 0.5 : 1)
                 
                 Circle()
-                    .foregroundStyle(.colorRedDark)
+                    .fill(.colorRedDark)
                     .frame(width: isAnimating ? 200 : 0)
                     .position(
                         x: isAnimating ?  geometry.size.width - 50 : geometry.size.width  + 50,
@@ -63,6 +66,68 @@ struct HomeView: View {
                                 imageOffset = .zero
                             }
                         }))
+                    
+                    ZStack {
+                        Capsule()
+                            .fill(.colorRed)
+                            .opacity(0.2)
+                        
+                        Capsule()
+                            .fill(.colorRed)
+                            .opacity(0.2)
+                            .padding(8)
+                        
+                        Text("Desculpa mais")
+                            .font(.title2)
+                            .bold()
+                            .foregroundStyle(.colorRedDark)
+                            .offset(x: 20)
+                        
+                        HStack {
+                            Capsule()
+                                .fill(.colorRed)
+                                .frame(width: buttonOffset + buttonHeight)
+                            Spacer()
+                        }
+                        
+                        HStack {
+                            ZStack {
+                                Circle()
+                                    .fill(.colorRed)
+                                
+                                Circle()
+                                    .fill(.colorRedDark)
+                                    .padding(8)
+                                
+                                Image(systemName: "chevron.right.2")
+                                    .font(.system(size: 24, weight: .bold))
+                                    .foregroundColor(.white)
+                            }
+                            Spacer()
+                        }
+                        .offset(x: buttonOffset)
+                        .gesture(DragGesture().onChanged({ gesture in
+                            if gesture.translation.width >= 0 &&
+                                gesture.translation.width <= (geometry.size.width - 60) - buttonHeight {
+                                withAnimation(.easeInOut(duration: 0.25)) {
+                                    buttonOffset = gesture.translation.width
+                                }
+                            }
+                        }).onEnded({ _ in
+                            if buttonOffset > (geometry.size.width - 60) / 2 {
+                                showSecondScreen = true
+                            } else {
+                                withAnimation(.easeInOut(duration: 0.25)) {
+                                    buttonOffset = 0
+                                }
+                            }
+                        }))
+                        
+                    }
+                    .frame(width: geometry.size.width - 60, height: buttonHeight)
+                    .opacity(isAnimating ? 1 : 0)
+                    .offset(y: isAnimating ? 0 : 100)
+                    
                 }.onAppear {
                     withAnimation(.easeInOut(duration: 1)) {
                         isAnimating = true
@@ -70,6 +135,9 @@ struct HomeView: View {
                 }.preferredColorScheme(.light)
             }
         }
+        .fullScreenCover(isPresented: $showSecondScreen, content: {
+            ContentView()
+        })
     }
 }
 
