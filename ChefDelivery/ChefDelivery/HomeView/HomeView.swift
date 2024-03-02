@@ -77,7 +77,7 @@ struct HomeView: View {
                             .opacity(0.2)
                             .padding(8)
                         
-                        Text("Desculpa mais")
+                        Text("Descubra mais")
                             .font(.title2)
                             .bold()
                             .foregroundStyle(.colorRedDark)
