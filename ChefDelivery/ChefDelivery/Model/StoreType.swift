@@ -7,7 +7,7 @@
 
 import Foundation
 
-class StoreType: Identifiable, ObservableObject {
+class StoreType: Identifiable, ObservableObject, Decodable {
     let id: Int
     let name: String
     let logoImage: String
@@ -24,5 +24,11 @@ class StoreType: Identifiable, ObservableObject {
         self.location = location
         self.stars = stars
         self.products = products
+    }
+    
+    private enum CodingKeys: String, CodingKey {
+        case id, name, location, stars, products
+        case logoImage = "logo_image"
+        case headerImage = "header_image"
     }
 }
