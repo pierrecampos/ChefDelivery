@@ -12,30 +12,31 @@ A aplicação ChefDelivery é a simulação de um aplicativo de restaurantes par
 
 ## Recursos
 
-- Listagem dos filmes com maior arrecadação de bilheteria dos últimos tempos;
-- Exibição detalhada de um filme;
-- Filtragem dos filmes de acordo com a busca do usuário;
-- Favoritar/desfavoritar um filme.
+- Listagem das categorias de restaurantes;
+- Carrossel de imagens destacando os destaques do momento;
+- Listagem de restaurantes;
+- Exibição detalhada do restaurante, incluindo nome, imagem e informações adicionais;
+- Listagem de produtos oferecidos pelo restaurante;
+- Exibição detalhada do produto, incluindo nome, imagem, descrição e preço;
+- Implementação de um menu de filtragem para selecionar a quantidade de estrelas desejada;
+- Exibição dos restaurantes filtrados de acordo com a seleção feita pelo usuário;
+- Animações para criar transições suaves nos componentes;
+- Efeito de desfoque aplicado aos elementos da interface;
+- Arraste e solte para interações de arrastar imagens;
+- Animação de escala para aumentar e diminuir o tamanho dos elementos;
+- Implementação de um botão customizado com efeito de deslizamento;
+- Carrossel automático com transição entre os itens a cada 3 segundos;
 
 ## Técnicas e tecnologias
 
-- UIKit: Framework para construção de interfaces de usuário;
+- SwiftUI: Framework moderno e declarativo da Apple para a criação de interfaces de usuário em aplicativos iOS;
 - XCode: Ambiente de desenvolvimento integrado (IDE) oficial da Apple para desenvolvimento de aplicativos iOS;
 - Swift: Linguagem de programação poderosa e intuitiva usada para desenvolver aplicativos iOS;
-- View code: Abordagem programática para construção de interfaces de usuário, sem o uso de storyboards;
-- `UINavigationController`: Utilizado para navegação entre telas;
-- `UIButton, UIImageView, UILabel, UIStackView`: Componentes de interface de usuário para construção das telas.
-- `UITableView`: Componente para construção de tabelas.
-- `UICollectionView`: Componente construção de coleções (horizontal e vertical) usado para mostrar os filmes favoritos.
-- `UITabBarController`: Menu inferior, que possibilita alternar entre telas e funcionalidades no projeto.
-- `UITableViewDataSource`, `UITableViewDelegate`: Protocolos para construção de tabelas.
-- `UISearchBar`, `UISearchBarDelegate`: Componente e protocolo para construção de barras de pesquisa.
-- `UITableViewCell`: Construção de células para tabelas.
-- `URLSession`: Classe que permite requisições HTTP.
-- `Async/Await`: Funcionalidade que lida com operações assíncronas.
-- `Cocoapods`: Gerenciador de dependências.
-- `MVP`: Padrão arquitetural escolhido para refatorar o projeto.
-
+- ZStack: Componente que empilha os elementos em relação ao eixo Z, de profundidade, fazendo com que os elementos fiquem uns embaixo de outros;
+- withAnimation: Função do SwiftUI utilizada para animar as mudanças de valores de uma variável de estado;
+- GeometryReader: Recurso para obter informações sobre a geometria da tela;
+- Timer: Utilização de temporizadores para automatizar o carrossel;
+- DragGesture: Gesto que permite aos usuários interagirem com as visualizações por meio de movimentos de arrastar.
 
 ## Requisitos
 
@@ -47,16 +48,15 @@ A aplicação ChefDelivery é a simulação de um aplicativo de restaurantes par
 
 1. Realize o download do projeto;
 2. Descompacte o arquivo;
-3. Abra o terminal dentro da pasta Cinetopia;
-4. No terminal execute o comando `pod install` para realizar o download das dependências (necessário ter o gerenciador [CocoaPods](https://guides.cocoapods.org/using/getting-started.html) instalado);
-5. Após a instalação das dependências, dê duplo clique no arquivo `Cinetopia.xcodeproj`, que abrirá diretamente no XCode;
-6. Com o projeto aberto no XCode, você consegue visualizar todas as pastas e arquivos;
-7. Para rodar o seu projeto, você deve clicar no botão de play na parte superior do XCode. Você também pode alterar o simulador em que o aplicativo será exibido, e então, o projeto será aberto no simulador de sua preferência.
+3. Abra o terminal dentro da pasta ChefDelivery;
+4. Após a instalação das dependências, dê duplo clique no arquivo `ChefDelivery.xcodeproj`, que abrirá diretamente no XCode;
+5. Com o projeto aberto no XCode, você consegue visualizar todas as pastas e arquivos;
+6. Para rodar o seu projeto, você deve clicar no botão de play na parte superior do XCode. Você também pode alterar o simulador em que o aplicativo será exibido, e então, o projeto será aberto no simulador de sua preferência.
 
 
 ## Créditos
 
-Este projeto foi desenvolvido com base nas aulas fornecidas no curso [Desenvolva aplicativos iOS utilizando view code](https://cursos.alura.com.br/formacao-aplicativos-ios-view-code) da plataforma alura.
+Este projeto foi desenvolvido com base nas aulas fornecidas no curso [Construa aplicativos iOS com SwiftUI](https://cursos.alura.com.br/formacao-ios-swiftui) da plataforma alura.
 
 ## Licença
 
