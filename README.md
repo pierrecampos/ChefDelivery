@@ -1,1 +1,65 @@
-# ChefDelivery
+# ChefDelivery - Aplicativo iOS
+
+A aplicação ChefDelivery é a simulação de um aplicativo de restaurantes para o sistema operacional iOS que utiliza a linguagem Swift e o framework SwiftUI.
+
+
+<div style="display: flex; justify-content:space-around; gap: 1%;"> 
+    <img src="imgs/home.png" alt="Tela inicial" width="24%">
+    <img src="imgs/principal.png" alt="Tela principal" width="24%">
+    <img src="imgs/storeDetails.png" alt="Detalhes da Loja" width="24%">
+    <img src="imgs/product.png" alt="Produto selecionadoi" width="24%">
+</div>
+
+## Recursos
+
+- Listagem dos filmes com maior arrecadação de bilheteria dos últimos tempos;
+- Exibição detalhada de um filme;
+- Filtragem dos filmes de acordo com a busca do usuário;
+- Favoritar/desfavoritar um filme.
+
+## Técnicas e tecnologias
+
+- UIKit: Framework para construção de interfaces de usuário;
+- XCode: Ambiente de desenvolvimento integrado (IDE) oficial da Apple para desenvolvimento de aplicativos iOS;
+- Swift: Linguagem de programação poderosa e intuitiva usada para desenvolver aplicativos iOS;
+- View code: Abordagem programática para construção de interfaces de usuário, sem o uso de storyboards;
+- `UINavigationController`: Utilizado para navegação entre telas;
+- `UIButton, UIImageView, UILabel, UIStackView`: Componentes de interface de usuário para construção das telas.
+- `UITableView`: Componente para construção de tabelas.
+- `UICollectionView`: Componente construção de coleções (horizontal e vertical) usado para mostrar os filmes favoritos.
+- `UITabBarController`: Menu inferior, que possibilita alternar entre telas e funcionalidades no projeto.
+- `UITableViewDataSource`, `UITableViewDelegate`: Protocolos para construção de tabelas.
+- `UISearchBar`, `UISearchBarDelegate`: Componente e protocolo para construção de barras de pesquisa.
+- `UITableViewCell`: Construção de células para tabelas.
+- `URLSession`: Classe que permite requisições HTTP.
+- `Async/Await`: Funcionalidade que lida com operações assíncronas.
+- `Cocoapods`: Gerenciador de dependências.
+- `MVP`: Padrão arquitetural escolhido para refatorar o projeto.
+
+
+## Requisitos
+
+- iOS 13.0 ou posterior.
+- Xcode 12.0 ou posterior.
+- Conexão à internet.
+
+## Como Usar
+
+1. Realize o download do projeto;
+2. Descompacte o arquivo;
+3. Abra o terminal dentro da pasta Cinetopia;
+4. No terminal execute o comando `pod install` para realizar o download das dependências (necessário ter o gerenciador [CocoaPods](https://guides.cocoapods.org/using/getting-started.html) instalado);
+5. Após a instalação das dependências, dê duplo clique no arquivo `Cinetopia.xcodeproj`, que abrirá diretamente no XCode;
+6. Com o projeto aberto no XCode, você consegue visualizar todas as pastas e arquivos;
+7. Para rodar o seu projeto, você deve clicar no botão de play na parte superior do XCode. Você também pode alterar o simulador em que o aplicativo será exibido, e então, o projeto será aberto no simulador de sua preferência.
+
+
+## Créditos
+
+Este projeto foi desenvolvido com base nas aulas fornecidas no curso [Desenvolva aplicativos iOS utilizando view code](https://cursos.alura.com.br/formacao-aplicativos-ios-view-code) da plataforma alura.
+
+## Licença
+
+Este aplicativo é distribuído sob a licença MIT.
+
+---
